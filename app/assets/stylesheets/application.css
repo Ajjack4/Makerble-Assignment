@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- /* .login-container {
+ .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,4 +91,157 @@
   .btn:hover {
     opacity: 0.8;
   }
-   */
+  .header {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .add-btn {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .logout-btn {
+    background-color: #dc3545; /* Red */
+  }
+  
+  .patient-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    margin: 10px;
+    padding: 15px;
+    width: 250px; /* Fixed width for the card */
+    transition: transform 0.2s; /* Animation for hover effect */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Card title font size */
+    margin-bottom: 10px; /* Space below title */
+  }
+  
+  .card-text {
+    font-size: 1rem; /* Card text font size */
+    margin-bottom: 15px; /* Space below text */
+  }
+  
+  .edit-btn {
+    background-color: #ffc107; /* Yellow */
+  }
+  /* General form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Error explanation styling */
+#error_explanation {
+  background-color: #ffdddd;
+  border-left: 4px solid #f44336;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#error_explanation h2 {
+  color: #f44336;
+  font-size: 1.2rem;
+}
+
+#error_explanation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#error_explanation ul li {
+  color: #d32f2f;
+  font-size: 0.9rem;
+}
+
+/* Form labels */
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Input fields styling */
+.field input[type="text"],
+.field input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.field input[type="text"]:focus,
+.field input[type="number"]:focus {
+  border-color: #3498db;
+}
+
+/* Action buttons styling */
+.actions .edit-btn,
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  .field input[type="text"],
+  .field input[type="number"] {
+    font-size: 0.9rem;
+  }
+
+  .actions .edit-btn,
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+

@@ -8,7 +8,7 @@ default: &default
 
 development:
   <<: *default
-  database: medical_portal_development
+  database: medical_portal_dev
 
 test:
   <<: *default

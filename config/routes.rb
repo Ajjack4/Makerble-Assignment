@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy', as: 'logout'
-
+  delete '/logout', to: 'sessions#destroy'
   # resources :patients
-  resources :patients, only: [:index, :new, :create]
+  resources :patients
 
   
 end
