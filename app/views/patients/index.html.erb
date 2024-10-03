@@ -1,0 +1,23 @@
+
+
+<h1>Patients</h1>
+
+<%= link_to 'Add Patient', new_patient_path, class: 'btn btn-primary mb-3' %>
+
+<div class="row">
+  <% @patients.each do |patient| %>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= patient.name %></h5>
+          <p class="card-text">
+            <strong>Age:</strong> <%= patient.age %><br>
+            
+            <!-- Add more patient details here -->
+          </p>
+        
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

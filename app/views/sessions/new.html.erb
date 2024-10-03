@@ -1,0 +1,53 @@
+<div class="login-container">
+  <div class="login-form">
+    <h1>Login</h1>
+    
+    <%= form_with url: login_path, method: :post do |form| %>
+      
+      <!-- Email Field -->
+      <div class="form-group">
+        <%= form.label :email, "Email" %>
+        <%= form.email_field :email, class: "form-control", placeholder: "Email" %>
+      </div>
+      
+      <!-- Password Field -->
+      <div class="form-group">
+        <%= form.label :password, "Password" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
+      </div>
+
+      <!-- Show Password -->
+      <div class="form-group">
+        <%= check_box_tag 'show_password', 'Show Password', false, id: 'show_password' %>
+        <%= label_tag 'show_password', "Show Password" %>
+      </div>
+
+      <!-- Role Selection Checkbox -->
+      <div class="form-group">
+        <%= form.label :role, "I am a:" %>
+        <%= form.radio_button :role, 'doctor', id: 'doctor' %> Doctor
+        <%= form.radio_button :role, 'receptionist', id: 'receptionist' %> Receptionist
+      </div>
+
+      <!-- Login Button -->
+      <div class="form-group">
+        <%= form.submit "LOGIN", class: "btn-login" %>
+      </div>
+      
+    <% end %>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const showPasswordCheckbox = document.getElementById('show_password');
+    const passwordField = document.querySelector('input[type="password"]');
+
+    showPasswordCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    });
+  });
+</script>

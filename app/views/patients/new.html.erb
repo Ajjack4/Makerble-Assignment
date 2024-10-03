@@ -1,0 +1,17 @@
+<h1>Add New Patient</h1>
+
+<%= form_with model: @patient, local: true do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div>
+    <%= f.submit 'Add Patient', class: 'btn btn-primary' %>
+  </div>
+<% end %>
